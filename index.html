@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,61 @@
     <title>1stProject</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>BUDGET APP</h1>
     <div class="budget-section">
 
         <div class="budget-form" id="budgetform">
             <form id="submitWage">
-               <label for="">Start Budget</label> <br />
-               <select name="rate" id="wageRate">
-                   <option value="hr">Hourly</option>
-                   <option value="yr">Yearly</option>
-               </select>
-               <input type="number" step="0.01" id="netPay" /> <br />
-               <button type="submit">Add Budget</button>
-             </form>
+                <label for="">Start Budget</label> <br />
+                <select name="rate" id="wageRate">
+                    <option value="hr">Hourly</option>
+                    <option value="yr">Yearly</option>
+                </select>
+                <input type="number" step="0.01" id="netPay" />
+                <button type="submit">Add Budget</button>
+            </form>
         </div>
-      </div>
+
+        <table>
+            <tr>
+                <th>Hourly</th>
+                <th>Weekly</th>
+                <th>BiWeekly</th>
+                <th>Monthly</th>
+                <th>Yearly</th>
+            </tr>
+            <tr>
+                <td id="hourly"></td>
+                <td id="weekly"></td>
+                <td id="biweekly"></td>
+                <td id="monthly"></td>
+                <td id="yearly"></td>
+            </tr>
+
+        </table>
+
+        <div class="budget">
+            <h2>budget</h2>
+            <!-- <img src="image/money-bag.svg" width="40" alt="" /> -->
+            <p class="amount">$ <span id="budgetAmount">0</span></p>
+        </div>
+
+        <div class="expenses">
+            <h2>expenses</h2>
+            <!-- <img src="image/accounting.svg" width="40" alt="" /> -->
+            <p class="exp-amount">$ <span id="expensesAmount">0</span></p>
+        </div>
+
+        <div class="balance">
+            <h2>balance</h2>
+            <!-- <img src="image/law.svg" width="40" alt="" /> -->
+            <p class="amount bala">$ <span id="balanceAmount">0</span></p>
+        </div>
+
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>

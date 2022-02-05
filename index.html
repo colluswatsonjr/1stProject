@@ -8,7 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1>BUDGET APP</h1>
+    <div class="budget-section">
+
+        <div class="budget-form" id="budgetform">
+            <form id="submitWage">
+               <label for="">Start Budget</label> <br />
+               <select name="rate" id="wageRate">
+                   <option value="hr">Hourly</option>
+                   <option value="yr">Yearly</option>
+               </select>
+               <input type="number" step="0.01" id="netPay" /> <br />
+               <button type="submit">Add Budget</button>
+             </form>
+        </div>
+      </div>
     <script src="script.js"></script>
 </body>
 </html>

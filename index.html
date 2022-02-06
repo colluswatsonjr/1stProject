@@ -10,57 +10,43 @@
 </head>
 
 <body>
-    <h1>BUDGET APP</h1>
-    <div class="budget-section">
-
-        <div class="budget-form" id="budgetform">
-            <form id="submitWage">
-                <label for="">Start Budget</label> <br />
-                <select name="rate" id="wageRate">
-                    <option value="hr">Hourly</option>
-                    <option value="yr">Yearly</option>
-                </select>
-                <input type="number" step="0.01" id="netPay" />
+    <!-- ADJUST BUDGET SECTION -->
+    <div class="adjustSection" id="adjustBudget">
+        <div class="adjust-form" id="addBudget">
+            <form action="" id="addBudgetForm">
+                <label for="">Enter Monthly Budget:</label> <br>
+                <input type="number" step='0.01' id="budgetAmount">
                 <button type="submit">Add Budget</button>
             </form>
+            <div class="budget">
+                <h2>Budget</h2>
+                <p class="amount">$<span id="myBudgetAmount">0</span></p>
+            </div>
         </div>
+        <!-- ADJUST EXPENSES -->
+        <div class="adjust-expense" id="adjustExpense">
+            <form action="" id="addExpenseForm">
+                <div class="">
+                    <label for="">Enter Expenses:</label> <br />
+                    <input type="text" placeholder='Expense Name' id="expenseName" />
+                    <input type="number" placeholder='Expense Amount' step='0.01' id="expenseAmount" />
+                </div>
+                <button type="submit" id="addExpense">Add Expense</button>
+            </form>
+            <div>
+                <table id="showExpense">
+                    <tr>
+                        <th>Name</th>
+                        <th>Expense</th>
+                    </tr>
+                    <tr>
+                        <th>Total:</th>
+                        <th>$0</th>
+                    </tr>
+                </table>
+            </div>
 
-        <table>
-            <tr>
-                <th>Hourly</th>
-                <th>Weekly</th>
-                <th>BiWeekly</th>
-                <th>Monthly</th>
-                <th>Yearly</th>
-            </tr>
-            <tr>
-                <td id="hourly"></td>
-                <td id="weekly"></td>
-                <td id="biweekly"></td>
-                <td id="monthly"></td>
-                <td id="yearly"></td>
-            </tr>
-
-        </table>
-
-        <div class="budget">
-            <h2>budget</h2>
-            <!-- <img src="image/money-bag.svg" width="40" alt="" /> -->
-            <p class="amount">$ <span id="budgetAmount">0</span></p>
         </div>
-
-        <div class="expenses">
-            <h2>expenses</h2>
-            <!-- <img src="image/accounting.svg" width="40" alt="" /> -->
-            <p class="exp-amount">$ <span id="expensesAmount">0</span></p>
-        </div>
-
-        <div class="balance">
-            <h2>balance</h2>
-            <!-- <img src="image/law.svg" width="40" alt="" /> -->
-            <p class="amount bala">$ <span id="balanceAmount">0</span></p>
-        </div>
-
     </div>
     <script src="script.js"></script>
 </body>

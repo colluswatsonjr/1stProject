@@ -27,6 +27,7 @@ const expenseForm = () => document.getElementById('addExpenseForm')
 const expenseName = () => document.getElementById('expenseName')
 const expenseAmount = () => document.getElementById('expenseAmount')
 const showExpense = () => document.getElementById('showExpense')
+const showExpTotal = () => document.getElementById('totalExpense')
 
 expenseForm().addEventListener('submit', (event) => {
     event.preventDefault();
@@ -76,23 +77,35 @@ function displayExpense(expenses) {
                 <td><button id="${exp.id}" onclick="deleteExpense(${exp.id})"><img src="" width="15" alt="" /></button></td>
             </tr>
             `
-        let totaltr = document.createElement('tr');
-        totaltr.innerHTML =
-            `
-            <tr>
-                <th>Total:</th>
-                <th class="totalExpense">Expense</th>
-            </tr>
-            `
+
         showExpense().appendChild(tr)
-        showExpense().appendChild(totaltr)
+        
     }
+    let totaltr = document.createElement('tr');
+    totaltr.innerHTML =
+        `
+        <tr>
+            <th>Total:</th>
+            <th id="totalExpense">Expense</th>
+        </tr>
+        `
+    showExpense().appendChild(totaltr)
     expenseTotal();
-    // showExpense().style.display = 'block';
 };
 
 function expenseTotal(){
     console.log(expenseList)
+    let expTotal = 0;
+    for(const listing of expenseList){
+        expTotal = expTotal + Number(listing.amount)
+    }
+    showExpTotal().innerText = expTotal
+    updateBalance();
+}
+const myExpenseTotal = () => document.getElementById('totalExpense')
+const showBudget = () => document.getElementById('showBudget')
+function updateBalance(){
+    showBudget().innerText = myBudget.innerText - totalExpense.innerText
 }
 
 // EDIT/DELETE EXPENSE

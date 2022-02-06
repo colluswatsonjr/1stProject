@@ -12,6 +12,9 @@
 <body>
     <!-- ADJUST BUDGET SECTION -->
     <div class="adjustSection" id="adjustBudget">
+        <!-- ADJUST BUDGET SECTION -->
+        <h2>Budget</h2>
+
         <div class="adjust-form" id="addBudget">
             <form action="" id="addBudgetForm">
                 <label for="">Enter Monthly Budget:</label> <br>
@@ -19,12 +22,13 @@
                 <button type="submit">Add Budget</button>
             </form>
             <div class="budget">
-                <h2>Budget</h2>
                 <p class="amount">$<span id="myBudgetAmount">0</span></p>
             </div>
         </div>
+
         <!-- ADJUST EXPENSES -->
         <div class="adjust-expense" id="adjustExpense">
+            <h2>EXPENSES</h2>
             <form action="" id="addExpenseForm">
                 <div class="">
                     <label for="">Enter Expenses:</label> <br />
@@ -45,7 +49,11 @@
                     </tr>
                 </table>
             </div>
-
+        </div>
+        <!-- BALANCE -->
+        <div class="adjust-balance" id="adjustBalance">
+            <h2>Budget</h2>
+            <h3 id="showBudget">0</h3>
         </div>
     </div>
     <script src="script.js"></script>
